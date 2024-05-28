@@ -1,0 +1,135 @@
+/* Skill progress bar */
+.skills {
+    margin-top: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px; /* Added padding for better spacing */
+}
+
+.skill {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 10px; /* Reduced margin for a tighter layout */
+}
+
+.skill-label {
+    flex-basis: 150px; /* Set width for label column */
+}
+
+.skill label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    flex-grow: 1; /* Allow progress bar to take remaining space */
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 8px; /* Adjusted height to make the bar thinner */
+    margin-left: 20px; /* Add space between label and progress bar */
+    position: relative;
+}
+
+.progress {
+    height: 100%; /* Full height of the progress-bar */
+    background-color: #76c7c0;
+    width: 50%; /* Initial width to be updated by JS */
+    transition: width 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.progress-label {
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 10px); /* Position it to the right of the progress bar */
+    transform: translateY(-50%);
+    font-size: 0.8em;
+    color: #333;
+}
+
+#services {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.services-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding-bottom: 20px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.services-container::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+}
+
+.service-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 0 0 auto;
+    scroll-snap-align:inherit;
+    width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-card.active {
+    transform: scale(1.1);
+    z-index: 10;
+    position: relative;
+}
+
+.service-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.service-card h3 {
+    margin: 15px 0;
+    font-size: 1.5em;
+}
+
+.service-card p {
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .service-card {
+        width: 250px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        width: 200px;
+        padding: 10px;
+    }
+
+    .service-card h3 {
+        font-size: 1.2em;
+    }
+}
+
+
+

@@ -1,0 +1,690 @@
+/* Reset some basic elements */
+body, h1, h2, h3, p, ul, li, form, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+/* nav */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed; /* Fixed positioning */
+    top: 0; /* Fixed at the top */
+    width: 100%; /* Take up full width of the viewport */
+    z-index: 999; /* Ensure it's above other elements */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Active link styles */
+nav ul li a.active {
+    font-weight: bold;
+    color: red;
+}
+
+
+/* Section styling */
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+section:nth-of-type(even) {
+    background: #f4f4f4;
+}
+
+/* About section styling */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.about-content {
+    max-width: 600px;
+    margin: 1rem;
+}
+
+.profile-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 20px;
+}
+
+.profile, .skills {
+    background: #fff;
+    border: 3px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    padding: 0.5rem; /* Reduced padding */
+    flex: 1 1 20%; /* Equal space */
+    text-transform: none;
+    letter-spacing: 0.2rem;
+    font-size: 1rem;
+    line-height: 1.5rem; /* Reduced line-height */
+    font-weight: normal; /* Normal font weight */
+    font-style: normal; /* Normal font style */
+}
+
+.profile h3, .skills h3 {
+    margin-bottom: 0.5rem;
+    font-weight: normal; /* Normal font weight */
+    font-style: normal; /* Normal font style */
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-card, .skills-card {
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 5px; /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    margin: 5px; /* Reduced margin */
+    width: calc(50% - 10px); /* Adjusted width */
+    max-width: 180px; /* Reduced max-width */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px; /* Reduced margin */
+    font-weight: normal; /* Normal font weight */
+    font-style: normal; /* Normal font style */
+}
+
+.profile h3, .skills h3 {
+    margin-top: 2px;
+    margin-bottom: 10px; /* Reduced margin */
+    font-weight: normal; /* Normal font weight */
+    font-style: normal; /* Normal font style */
+}
+
+.profile li {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+    margin-top: 10px; /* Reduced margin */
+}
+
+.profile li span {
+    flex: 0;
+    text-align: right;
+    font-weight: normal; /* Normal font weight */
+    font-style: normal; /* Normal font style */
+}
+
+
+
+
+
+
+/* Project styling */
+.project {
+    margin: 2rem 0;
+}
+
+/* Contact form styling */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block; /* Display labels as block elements */
+    margin-bottom: 0.5rem; /* Add spacing between labels and input fields */
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: calc(100% - 1rem); /* Set the width to fill the container minus padding */
+    padding: 0.75rem; /* Adjusted padding for input fields */
+    margin-bottom: 1rem;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Apply curved edges */
+}
+
+form button {
+    padding: 0.75rem 1.5rem; /* Adjusted padding for button */
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Apply curved edges */
+}
+
+form button:hover {
+    background: #555;
+}
+
+/* Flexbox for label and input alignment */
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form div label {
+    align-self: flex-start; /* Align labels to the start of the flex container */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    form {
+        max-width: 80%; /* Adjusted max-width for smaller screens */
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
+
+/* Footer styling */
+.color{
+background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: flex-end;}
+.social-links {
+    display: flex;
+    align-items: center;
+}
+
+.social-links a {
+    margin-right: 10px;
+    position: relative;
+}
+
+.social-links a img {
+    width: 30px;
+}
+
+.social-links a span {
+    display: none;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.social-links a:hover span {
+    display: block;
+}
+
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: right; /* Align content to the right */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Align content in the footer to the ends */
+    align-items: center;
+}
+
+.social-links img {
+    width: 30px; /* Adjust size as needed */
+    margin-left: 10px; /* Add spacing between social media icons */
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-skills {
+        flex-direction: column;
+    }
+
+    .profile, .skills {
+        width: calc(100% - 2rem);
+    }
+
+    form {
+        width: 90%;
+    }
+}
+
+/*Profile details */
+.profile-details {
+    display: grid;
+    grid-template-columns: max-content auto;
+    row-gap: 10px;
+}
+
+.detail {
+    display: flex;
+    align-items: left;
+}
+
+.detail label {
+    width: 120px;
+    font-weight: bold;
+}
+
+.detail span {
+    margin-left: 10px;
+}
+
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills {
+        padding: 5px; /* Adjust padding for smaller screens */
+        border-width: 1px; /* Adjust border width for smaller screens */
+    }
+
+    .skill {
+        margin-bottom: 5px; /* Further reduce margin for smaller screens */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+        margin-bottom: 15px;
+    }
+
+    .progress-bar {
+        width: 100%; /* Full width on small screens */
+        margin-left: 0; /* Remove margin for smaller screens */
+    }
+
+    .progress-label {
+        left: calc(100% + 5px); /* Adjust position for smaller screens */
+    }
+}
+
+/* Background image */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#home {
+    height: 78vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Initially set opacity to 0 */
+    animation: fadeIn 1s forwards; /* Apply fadeIn animation */
+    background-image: url('images/background.jpg');
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start opacity from 0 */
+    }
+    to {
+        opacity: 1; /* End opacity at 1 */
+    }
+}
+
+
+
+
+.content {
+    text-align: left;
+    color: white;
+    position:relative;
+    top: 40%;
+    transform: translateY(-50%);
+    left: 20px; /* Adjust this value as needed */
+    width: calc(100% - 70px); /* Adjust this value as needed */
+    font-size:larger;
+
+   
+}
+
+/* Profile */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start of the cross axis */
+}
+
+.about-card {
+    display: flex;
+    max-width: 1100px; /* Adjust as needed */
+    align-items: center; /* Align items vertically */
+}
+
+.about-image {
+    width: 250px; /* Adjust as needed */
+    height: 290px;
+    border-radius: 10px 10px 10px 10px; /* Rounded corners on the left side */
+}
+
+.about-content {
+    flex: 1;
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 0 10px 10px 0; /* Rounded corners on the right side */
+    background-color: #f9f9f9; /* Background color for the content */
+    text-align: justify; /* Justify text */
+    line-height: 1.6; /* Adjust line height as needed */
+    margin-left: 20px; /* Adjust margin as needed to create space between image and content */
+    
+    max-width: none; /* Stretch content to the end */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3.6rem; /* Adjust margin-bottom as needed */
+}
+
+.about-content p {
+    margin-bottom: 1rem; /* Add margin between paragraphs */
+}
+
+
+
+
+/* Button to up */
+#scrollToTopButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    z-index: 999; /* Ensure it's above other elements */
+}
+
+#scrollToTopButton:hover {
+    background-color: #0056b3;
+}
+/* view resume */
+/* Button styles */
+button {
+    background: linear-gradient(to right, #4CAF50, #2196F3); /* Gradient background */
+    border: none;
+    color: white;
+    padding: 15px 24px; /* Reduced padding for responsiveness */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for background and box-shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+button:hover {
+    background: linear-gradient(to right, #2196F3, #4CAF50); /* Gradient background on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Change box shadow on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    button {
+        padding: 12px 20px; /* Adjusted padding for smaller screens */
+        font-size: 14px; /* Reduced font size for smaller screens */
+    }
+}
+
+
+/* Change the color of the button when hovered */
+button:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+/* Projects */
+
+/* Projects */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards horizontally */
+}
+
+.project-card {
+    width: calc(100% - 20px); /* Full width on small screens */
+    max-width: 400px; /* Maximum width for each card (increased from 350px) */
+    max-height: 500px; /* Maximum height for each card (increased from 400px) */
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border-radius: 8px; /* Add rounded corners */
+    overflow: hidden; /* Ensure the content doesn't overflow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
+}
+
+.project-card img {
+    width: 100%; /* Make the image fill the card */
+    height: auto; /* Maintain aspect ratio */
+    border-top-left-radius: 8px; /* Round the corners of the image */
+    border-top-right-radius: 8px;
+}
+
+.project-card h3 {
+    margin: 15px;
+    font-size: 20px; /* Increased font size for headings */
+}
+
+.project-card p {
+    margin: 0 15px 15px; /* Some bottom margin */
+    font-size: 16px; /* Increased font size for paragraph */
+}
+
+/* Hover effect */
+.project-card:hover {
+    transform: translateY(-5px); /* Move the card up */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+}
+
+@media (min-width: 768px) {
+    .project-card {
+        width: calc(50% - 20px); /* Two columns on medium screens */
+    }
+}
+
+
+/* Image */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style for the image */
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Style for the overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: #fff; /* Text color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+}
+
+/* Style for the overlay content */
+.overlay-content {
+    text-align: center;
+}
+
+/* Style for the link */
+.overlay-link {
+    color: #fff;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+/* Show overlay on hover */
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+
+
+.overlay-link {
+    color: black; /* Set the color to black */
+    text-decoration: underline; /* Underline the link */
+}
+
+/* Email button */
+.email-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff; /* Default solid color */
+    background: linear-gradient(to right, #4CAF50, #2196F3); /* Gradient background */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, color 0.3s ease; /* Added background transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+.email-button:hover {
+    background: linear-gradient(#0056b3, #004296); /* Gradient background on hover */
+    color: #fff; /* Change text color on hover */
+    transform: translateY(-2px); /* Add subtle hover effect */
+    box-shadow: 0 6px 10px rgba(0, 4, 0, 0.5); /* Enhance box shadow on hover */
+}
+
+.email-button:hover,
+.email-button:focus {
+    outline: none; /* Remove focus outline */
+}
+
+@media (max-width: 600px) {
+    .email-button {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+}
+
+
+
+
+/* service images */
+.short-image {
+    width: 80px; /* Set the desired width */
+    height: 70px; /* Let the height adjust proportionally */
+}
+
+.dba-image{
+    width: 80px; /* Set the desired width */
+    height: 95px;
+}
+.gmail-image {
+    width: 38px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    vertical-align: middle; /* Align the image vertically in the middle of the text */
+    margin-left: 10px; /* Add some space between the text and the image */
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease; /* Smooth transition on hover */
+}
+
+.gmail-image:hover {
+    transform: scale(1.2); /* Slightly increase size on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .gmail-image {
+        width: 30px; /* Adjust width for smaller screens */
+        height: 32px; /* Adjust height for smaller screens */
+    }
+}
+
+
+
