@@ -10,43 +10,6 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
-/* nav */
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: fixed; /* Fixed positioning */
-    top: 0; /* Fixed at the top */
-    width: 100%; /* Take up full width of the viewport */
-    z-index: 999; /* Ensure it's above other elements */
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Active link styles */
-nav ul li a.active {
-    font-weight: bold;
-    color: red;
-}
-
-
 /* Section styling */
 section {
     padding: 2rem;
@@ -221,89 +184,36 @@ form div label {
 
 
 /* Footer styling */
-.color{
-background: #333;
+.color {
+    background: #333;
     color: #fff;
-    padding: 1rem 0;
+    padding: 1rem;
     display: flex;
-    justify-content: flex-end;}
+    flex-direction: column; /* Adjusted to stack content vertically on smaller screens */
+    align-items: center; /* Center align content */
+}
+
 .social-links {
     display: flex;
     align-items: center;
+    margin-top: 1rem; /* Added margin to separate social links from other content */
 }
 
 .social-links a {
-    margin-right: 10px;
-    position: relative;
-}
-
-.social-links a img {
-    width: 30px;
-}
-
-.social-links a span {
-    display: none;
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.social-links a:hover span {
-    display: block;
-}
-
-footer {
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: right; /* Align content to the right */
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between; /* Align content in the footer to the ends */
-    align-items: center;
+    margin: 0 5px; /* Adjusted margin for better spacing */
 }
 
 .social-links img {
-    width: 30px; /* Adjust size as needed */
-    margin-left: 10px; /* Add spacing between social media icons */
+    width: 30px;
 }
-
 
 /* Responsive design */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 0.5rem 0;
-    }
-
-    .about-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .profile-skills {
-        flex-direction: column;
-    }
-
-    .profile, .skills {
-        width: calc(100% - 2rem);
-    }
-
-    form {
-        width: 90%;
+    .color {
+        justify-content: center; /* Center align content horizontally on smaller screens */
     }
 }
+
 
 /*Profile details */
 .profile-details {
@@ -318,7 +228,7 @@ footer {
 }
 
 .detail label {
-    width: 120px;
+    width: 80px;
     font-weight: bold;
 }
 
@@ -416,43 +326,92 @@ body {
    
 }
 
-/* Profile */
+/* General styles */
 .about-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align items to the start of the cross axis */
+    align-items: flex-start;
+    padding: 1rem; /* Add padding for better spacing on mobile */
 }
 
 .about-card {
     display: flex;
-    max-width: 1100px; /* Adjust as needed */
-    align-items: center; /* Align items vertically */
+    max-width: 1100px;
+    align-items: center;
+    flex-direction: row; /* Default row layout for larger screens */
+    padding: 1rem; /* Add padding for better spacing */
+    border: 1px solid #ddd; /* Optional border for better distinction */
+    border-radius: 10px; /* Rounded corners for the whole card */
+    background-color: #fff; /* Background color for the card */
 }
 
 .about-image {
-    width: 250px; /* Adjust as needed */
-    height: 290px;
-    border-radius: 10px 10px 10px 10px; /* Rounded corners on the left side */
+    width: 100%; /* Make the image responsive */
+    max-width: 250px; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px 0 0 10px; /* Rounded corners on the left side */
 }
+
 
 .about-content {
     flex: 1;
-    padding: 20px; /* Adjust padding as needed */
+    padding: 20px;
     border-radius: 0 10px 10px 0; /* Rounded corners on the right side */
-    background-color: #f9f9f9; /* Background color for the content */
-    text-align: justify; /* Justify text */
-    line-height: 1.6; /* Adjust line height as needed */
-    margin-left: 20px; /* Adjust margin as needed to create space between image and content */
-    
-    max-width: none; /* Stretch content to the end */
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 3.6rem; /* Adjust margin-bottom as needed */
+    background-color: #f9f9f9;
+    text-align: justify;
+    line-height: 1.6;
+    margin-left: 20px;
 }
 
 .about-content p {
-    margin-bottom: 1rem; /* Add margin between paragraphs */
+    margin-bottom: 1rem;
 }
+
+.about-content button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.about-content button:hover {
+    background-color: #555;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .about-card {
+        flex-direction: column; /* Stack image and content vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+    }
+
+    .about-image {
+        width: 80%; /* Adjust width for mobile */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px 10px 0 0; /* Rounded corners on the top side */
+    }
+
+    .about-content {
+        padding: 1rem; /* Adjust padding */
+        margin-left: 0; /* Remove left margin */
+        border-radius: 0 0 10px 10px; /* Rounded corners on the bottom side */
+    }
+
+    .about-content p {
+        margin-bottom: 1rem;
+    }
+
+    .about-content button {
+        width: 100%; /* Make button full width on mobile */
+        font-size: 1rem;
+    }
+}
+
 
 
 
