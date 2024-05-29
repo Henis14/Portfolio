@@ -11,7 +11,8 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <button id="nav-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+            <ul id="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
@@ -30,20 +31,17 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <div class="about-container">
-            <div class="about-container">
-                <div class="about-card">
-                    <img src="images/henis.jpeg" alt="Henis Dcosta" class="about-image">
-                    <div class="about-content">
-                        <p>Hi, I'm Henis Dcosta, a Computer Science student based in Ahmedabad, Gujarat. Currently studying at Indus University.</p>
-                        <p>I'm passionate about Information Technology, specializing in web development and Database Administration. Driven by curiosity and a love for learning, I enjoy creating programming content and diving into front-end and back-end. As I venture into freelancing, I'm excited to apply my skills to new projects and collaborate with fellow innovators.</p>
-                        <p>View and download my CV below to learn more about my journey! Let's connect and innovate together!</p>
-                        <a href="files/res.pdf" target="_blank"><button>Download Resume</button></a>
-
-                    </div>
-                    </div>
+    <div class="about-container">
+        <div class="about-card">
+            <img src="images/henis.jpeg" alt="Henis Dcosta" class="about-image">
+            <div class="about-content">
+                <p>Hi, I'm Henis Dcosta, a Computer Science student based in Ahmedabad, Gujarat. Currently studying at Indus University.</p>
+                <p>I'm passionate about Information Technology, specializing in web development and Database Administration. Driven by curiosity and a love for learning, I enjoy creating programming content and diving into front-end and back-end. As I venture into freelancing, I'm excited to apply my skills to new projects and collaborate with fellow innovators.</p>
+                <p>View and download my CV below to learn more about my journey! Let's connect and innovate together!</p>
+                <a href="files/res.pdf" target="_blank"><button>Download Resume</button></a>
             </div>
         </div>
+    </div>
         <div class="profile-skills">
             <div class="profile">
               <u>  <h3>Profile</h3></u>
@@ -147,7 +145,7 @@
                 <p>Digicard.inc aims to provide a platform where people can apply for credit cards & loans from different banks at one platform.</p>
                 <div class="overlay-content">
                     <h3></h3>
-                    <a href="https://drive.google.com/drive/folders/1zAqe9uzmXQzpIjw5tRKa_GRvdXGwoOX5?usp=drive_link" class="overlay-link" target="_blank">Learn More</a>
+                    <a href="https://henis14.github.io/Digicard/" class="overlay-link" target="_blank">Learn More</a>
                 </div>
             </div>
             <div class="project-card">
@@ -156,7 +154,7 @@
                 <p>Display your projects with images or videos, accompanied by concise descriptions highlighting your role and the technologies used.</p>
                 <div class="overlay-content">
                     <h3></h3></div>
-                    <a href="https://drive.google.com/drive/folders/1zAqe9uzmXQzpIjw5tRKa_GRvdXGwoOX5?usp=drive_link" class="overlay-link">Learn More</a>
+                    <a href="https://henis14.github.io/Techsolutions02.github.io/" class="overlay-link">Learn More</a>
             </div>
             <div class="project-card">
                 
@@ -185,7 +183,7 @@
     <!-- Footer -->
     <footer class="color">
         <div class="footer-content">
-            Made by @Henis Dcosta. 
+            <p>Made by @Henis Dcosta.</p>
             <div class="social-links">
                 <a href="https://www.instagram.com/heniissss14" target="_blank"><img src="images/insta.png" alt="Instagram"></a>
                 <a href="https://www.linkedin.com/in/henisd14" target="_blank"><img src="images/link.png" alt="LinkedIn"></a>
@@ -195,9 +193,11 @@
     </footer>
     
     
+    
 
 
     <script src="scripts.js"></script>
     <script src="skill.js"></script>
+    <script src="mobile menu.js"></script>
 </body>
 </html>
