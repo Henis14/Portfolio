@@ -51,6 +51,29 @@
     color: #333;
 }
 
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    .skill {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .skill-label {
+        flex-basis: auto; /* Allow label to take full width on smaller screens */
+        margin-bottom: 5px; /* Add some spacing between skills */
+    }
+
+    .progress-bar {
+        margin-left: 0; /* Remove left margin on progress bar */
+        margin-top: 10px; /* Add space between skills */
+    }
+
+    .progress-label {
+        position: static; /* Reset position to normal flow */
+        margin-top: 5px; /* Add space between progress bar and label */
+    }
+}
+
+
 #services {
     padding: 20px;
     background-color: #f9f9f9;
