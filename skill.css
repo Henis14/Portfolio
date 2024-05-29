@@ -132,4 +132,84 @@
 }
 
 
+/* General styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Toggle button styles */
+#nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    #nav-toggle {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #333; /* Background color for the navigation */
+        z-index: 999; /* Ensure it's above other elements */
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: none; /* Hide the navigation menu by default */
+    }
+
+    nav ul.show {
+        display: flex; /* Show the navigation menu when the show class is applied */
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: flex-end; /* Align menu items to the right */
+        padding: 1rem; /* Add padding for better spacing */
+    }
+
+    nav ul li {
+        margin: 0.5rem 0; /* Add margin between menu items */
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem; /* Adjust padding for menu items */
+        display: block;
+    }
+}
 
