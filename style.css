@@ -99,6 +99,7 @@ h2 {
     font-style: normal; /* Normal font style */
 }
 
+/* General styles for .profile li */
 .profile li {
     display: flex;
     justify-content: flex-start;
@@ -112,6 +113,36 @@ h2 {
     font-weight: normal; /* Normal font weight */
     font-style: normal; /* Normal font style */
 }
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    .profile li {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+        margin-top: 5px; /* Further reduce top margin */
+        margin-bottom: 10px; /* Increase bottom margin for better spacing */
+    }
+
+    .profile li span {
+        text-align: left; /* Align text to the left on smaller screens */
+        font-size: 0.9rem; /* Adjust font size for readability */
+        margin-bottom: 5px; /* Add margin to separate elements */
+    }
+}
+
+/* Additional styles for very small screens */
+@media (max-width: 480px) {
+    .profile li {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        
+    }
+
+    .profile li span {
+        font-size: 0.85rem; /* Further adjust font size for very small screens */
+    }
+}
+
 
 
 
@@ -381,6 +412,79 @@ body {
 .about-content button:hover {
     background-color: #555;
 }
+
+/* General styles for .about-content */
+.about-content {
+    flex: 1;
+    padding: 20px;
+    border-radius: 0 10px 10px 0; /* Rounded corners on the right side */
+    background-color: #f9f9f9;
+    text-align: justify;
+    line-height: 1.6;
+    margin-left: 20px;
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.about-content button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.about-content button:hover {
+    background-color: #555;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 15px;
+        border-radius: 0; /* Remove rounded corners for simplicity on smaller screens */
+        margin-left: 0;
+    }
+
+    .about-content p {
+        margin-bottom: 0.75rem;
+        font-size: 0.9rem; /* Adjust font size for readability */
+        line-height: 1.5; /* Adjust line height for better spacing */
+        word-spacing: 0.02em; /* Adjust word spacing to reduce excessive space */
+    }
+
+    .about-content button {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+        width: 100%; /* Make buttons full width on small screens */
+    }
+}
+
+/* Additional styles to improve readability on very small screens */
+@media (max-width: 480px) {
+    .about-content {
+        padding: 10px;
+    }
+
+    .about-content p {
+        font-size: 0.85rem; /* Further adjust font size for very small screens */
+        line-height: 1.4; /* Maintain a consistent line height */
+        word-spacing: 0.02em; /* Adjust word spacing */
+    }
+
+    .about-content button {
+        padding: 0.4rem;
+        font-size: 0.85rem;
+    }
+}
+
+
 
 /* Mobile styles */
 @media (max-width: 768px) {
