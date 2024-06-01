@@ -236,3 +236,25 @@ nav ul li a {
     }
 }
 
+/* Visit count */
+#visit-count {
+    position: fixed;
+    bottom: 10px;
+    right: 70px; /* Adjust this value to set it further from the corner */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments for mobile */
+@media only screen and (max-width: 768px) {
+    #visit-count {
+        bottom: 3px;
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Center horizontally */
+        padding: 8px 15px;
+        font-size: 0.8em;
+    }
+}
+
+
