@@ -214,24 +214,59 @@ form div label {
 
 
 
+/* Button to up */
+#scrollToTopButton {
+    position: fixed;
+    bottom: 60px; /* Adjusted to make room for visit count text */
+    right: 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    width: 40px; /* Set width to make it square */
+    height: 40px; /* Set height to make it square */
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    z-index: 999; /* Ensure it's above other elements */
+    text-align: center; /* Center align the content */
+    padding: 0; /* Remove padding */
+    background-image: url('images/up-arrow.png'); /* Path to the arrow image */
+    background-size: 50%; /* Resize image to fit inside the button */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center; /* Center the image */
+}
+
 /* Footer styling */
 .color {
     background: #333;
     color: #fff;
     padding: 1rem;
     display: flex;
-    flex-direction: column; /* Adjusted to stack content vertically on smaller screens */
-    align-items: center; /* Center align content */
+    justify-content: space-between; /* Space out the items horizontally */
+    align-items: center; /* Center content vertically */
+    position: relative;
+    flex-direction: row; /* Arrange items in a row */
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    flex-direction: row; /* Arrange text and social links horizontally */
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 0;
+    padding-right: 1rem; /* Add padding to the right of the text */
 }
 
 .social-links {
     display: flex;
     align-items: center;
-    margin-top: 1rem; /* Added margin to separate social links from other content */
+    justify-content: center; /* Center social links horizontally */
 }
 
 .social-links a {
-    margin: 0 5px; /* Adjusted margin for better spacing */
+    margin: 0 5px;
 }
 
 .social-links img {
@@ -241,30 +276,26 @@ form div label {
 /* Responsive design */
 @media (max-width: 768px) {
     .color {
-        justify-content: center; /* Center align content horizontally on smaller screens */
+        flex-direction: column;
+        justify-content: center;
     }
-}
 
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 1rem;
+    }
 
-/*Profile details */
-.profile-details {
-    display: grid;
-    grid-template-columns: max-content auto;
-    row-gap: 10px;
-}
+    .social-links {
+        margin-top: 1rem;
+    }
 
-.detail {
-    display: flex;
-    align-items: left;
-}
-
-.detail label {
-    width: 80px;
-    font-weight: bold;
-}
-
-.detail span {
-    margin-left: 10px;
+    .visit-count {
+        position: relative; /* Change to relative for responsive design */
+        bottom: 0;
+        left: 5px; /* Adjusted to move it a bit to the left side */
+        margin-top: 1rem; /* Add margin to create space above */
+    }
 }
 
 
@@ -516,29 +547,41 @@ body {
     }
 }
 
-
-
-
-
-/* Button to up */
+/* Button to Up */
 #scrollToTopButton {
     position: fixed;
-    bottom: 20px;
+    bottom: 15px; /* Adjusted to make room for visit count text and provide space from the bottom */
     right: 20px;
     background-color: #007bff;
-    color: white;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    width: 40px; /* Set width to make it square */
+    height: 40px; /* Set height to make it square */
     cursor: pointer;
     display: none; /* Initially hidden */
     z-index: 999; /* Ensure it's above other elements */
+    text-align: center; /* Center align the content */
+    padding: 0; /* Remove padding */
+    background-image: url('images/up-arrow.png'); /* Path to the arrow image */
+    background-size: 50%; /* Resize image to fit inside the button */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center; /* Center the image */
 }
 
 #scrollToTopButton:hover {
     background-color: #0056b3;
 }
-/* view resume */
+
+/* Responsive adjustments for mobile */
+@media only screen and (max-width: 768px) {
+    #scrollToTopButton {
+        bottom: 20px;
+        width: 30px; /* Decrease width for smaller screens */
+        height: 30px; /* Decrease height for smaller screens */
+    }
+}
+
+
 /* Button styles */
 button {
     background: linear-gradient(to right, #4CAF50, #2196F3); /* Gradient background */
