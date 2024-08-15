@@ -1,0 +1,82 @@
+/* Projects container with horizontal scrolling */
+.projects-wrapper {
+    overflow: hidden; /* Hide default scrollbar */
+    position: relative; /* Position for the custom scroll buttons */
+    padding: 10px 0; /* Optional: Add some vertical padding */
+    width: 100%; /* Ensure full width for scrolling */
+}
+
+.projects-container {
+    display: inline-flex; /* Keep items in a row */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    animation: scroll 80s linear infinite; /* Apply scrolling animation with total duration */
+}
+
+.project-card {
+    display: inline-block; /* Keep each card in a row */
+    width: 250px; /* Adjust width */
+    height: 350px; /* Adjust height */
+    margin: 10px; /* Margin around each card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Add a subtle border */
+    border-radius: 8px; /* Add rounded corners */
+    overflow: hidden; /* Ensure the content doesn't overflow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
+}
+
+.project-card img {
+    width: 100%; /* Make the image fill the card */
+    height: auto; /* Maintain aspect ratio */
+    border-top-left-radius: 8px; /* Round the corners of the image */
+    border-top-right-radius: 8px;
+}
+
+.project-card h3 {
+    margin: 15px;
+    font-size: 18px; /* Adjust font size for headings */
+}
+
+.project-card p {
+    margin: 0 15px 15px; /* Some bottom margin */
+    font-size: 14px; /* Adjust font size for paragraph */
+}
+
+/* Hover effect */
+.project-card:hover {
+    transform: translateY(-5px); /* Move the card up */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a shadow on hover */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .project-card {
+        width: 300px; /* Adjust width for larger screens */
+        height: 400px; /* Adjust height for larger screens */
+    }
+}
+
+/* Overlay styles */
+.overlay-content {
+    text-align: center;
+}
+
+.overlay-link {
+    color: black; /* Set the color to black */
+    text-decoration: underline; /* Underline the link */
+}
+
+/* Keyframes for scrolling effect */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    40% {
+        transform: translateX(-50%);
+    }
+    60% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
