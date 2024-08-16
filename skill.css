@@ -1,4 +1,3 @@
-/* Skill progress bar */
 .skills {
     margin-top: 20px;
     border: 2px solid #ccc;
@@ -9,46 +8,44 @@
 .skill {
     display: flex; /* Use flexbox for layout */
     align-items: center; /* Align items vertically */
-    margin-bottom: 10px; /* Reduced margin for a tighter layout */
+    margin-bottom: 10px; /* Margin for spacing between skills */
 }
 
 .skill-label {
-    flex-basis: 150px; /* Set width for label column */
+    flex-basis: 250px; /* Further increased width for label column */
 }
 
 .skill label {
     display: block;
     font-weight: bold;
-    margin-bottom: 5px;
 }
 
+/* Base Styles for Progress Bar */
 .progress-bar {
     flex-grow: 1; /* Allow progress bar to take remaining space */
     background-color: #e0e0e0;
     border-radius: 10px;
     overflow: hidden;
-    height: 8px; /* Adjusted height to make the bar thinner */
-    margin-left: 20px; /* Add space between label and progress bar */
+    height: 15px; /* Thickness of the bar */
     position: relative;
+    margin-left: 20px; /* Added margin-left for spacing */
 }
 
 .progress {
     height: 100%; /* Full height of the progress-bar */
-    background-color: #76c7c0;
-    width: 50%; /* Initial width to be updated by JS */
+    background-color: #96DED1;
+    width: 0; /* Start with 0 width */
     transition: width 1s ease-in-out;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative; /* Position relative to its parent */
 }
 
 .progress-label {
     position: absolute;
     top: 50%;
-    left: calc(100% + 10px); /* Position it to the right of the progress bar */
+    right: 10px; /* Position it to the right of the progress bar */
     transform: translateY(-50%);
     font-size: 0.8em;
-    color: #333;
+    color: black; /* Grey color for the percentage text */
 }
 
 /* Media queries for mobile responsiveness */
@@ -65,13 +62,23 @@
     .progress-bar {
         margin-left: 0; /* Remove left margin on progress bar */
         margin-top: 10px; /* Add space between skills */
+        width: 100%; /* Full width of the container */
     }
 
     .progress-label {
         position: static; /* Reset position to normal flow */
         margin-top: 5px; /* Add space between progress bar and label */
+        text-align: right; /* Align text to the right */
     }
 }
+
+@media (max-width: 480px) {
+    .progress-label {
+        font-size: 0.75em; /* Further adjust font size for very small screens */
+    }
+}
+
+
 
 
 #services {
@@ -236,25 +243,6 @@ nav ul li a {
     }
 }
 
-/* Visit count */
-#visit-count {
-    position: fixed;
-    bottom: 10px;
-    right: 70px; /* Adjust this value to set it further from the corner */
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
 
-/* Responsive adjustments for mobile */
-@media only screen and (max-width: 768px) {
-    #visit-count {
-        bottom: 3px;
-        left: 50%; /* Center horizontally */
-        transform: translateX(-50%); /* Center horizontally */
-        padding: 8px 15px;
-        font-size: 0.8em;
-    }
-}
 
 
