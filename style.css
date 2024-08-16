@@ -38,110 +38,6 @@ section:nth-of-type(even) {
     margin: 1rem;
 }
 
-.profile-skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 2rem;
-    margin-bottom: 20px;
-}
-
-.profile, .skills {
-    background: #fff;
-    border: 3px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 1rem;
-    padding: 0.5rem; /* Reduced padding */
-    flex: 1 1 20%; /* Equal space */
-    text-transform: none;
-    letter-spacing: 0.2rem;
-    font-size: 1rem;
-    line-height: 1.5rem; /* Reduced line-height */
-    font-weight: normal; /* Normal font weight */
-    font-style: normal; /* Normal font style */
-}
-
-.profile h3, .skills h3 {
-    margin-bottom: 0.5rem;
-    font-weight: normal; /* Normal font weight */
-    font-style: normal; /* Normal font style */
-}
-
-.skills ul {
-    list-style: none;
-    padding: 0;
-}
-
-.profile-card, .skills-card {
-    background-color: #f9f9f9;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 5px; /* Reduced padding */
-    display: flex;
-    flex-direction: column;
-    margin: 5px; /* Reduced margin */
-    width: calc(50% - 10px); /* Adjusted width */
-    max-width: 180px; /* Reduced max-width */
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 10px; /* Reduced margin */
-    font-weight: normal; /* Normal font weight */
-    font-style: normal; /* Normal font style */
-}
-
-.profile h3, .skills h3 {
-    margin-top: 2px;
-    margin-bottom: 10px; /* Reduced margin */
-    font-weight: normal; /* Normal font weight */
-    font-style: normal; /* Normal font style */
-}
-
-/* General styles for .profile li */
-.profile li {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 5px;
-    margin-top: 10px; /* Reduced margin */
-}
-
-.profile li span {
-    flex: 0;
-    text-align: right;
-    font-weight: normal; /* Normal font weight */
-    font-style: normal; /* Normal font style */
-}
-
-/* Media queries for mobile responsiveness */
-@media (max-width: 768px) {
-    .profile li {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: flex-start; /* Align items to the start */
-        margin-top: 5px; /* Further reduce top margin */
-        margin-bottom: 10px; /* Increase bottom margin for better spacing */
-    }
-
-    .profile li span {
-        text-align: left; /* Align text to the left on smaller screens */
-        font-size: 0.9rem; /* Adjust font size for readability */
-        margin-bottom: 5px; /* Add margin to separate elements */
-    }
-}
-
-/* Additional styles for very small screens */
-@media (max-width: 480px) {
-    .profile li {
-        margin-top: 5px;
-        margin-bottom: 10px;
-        
-    }
-
-    .profile li span {
-        font-size: 0.85rem; /* Further adjust font size for very small screens */
-    }
-}
 
 
 
@@ -351,6 +247,7 @@ body {
 
 
 
+/* Container for background image */
 #home {
     height: 78vh;
     background-size: cover;
@@ -358,40 +255,57 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0; /* Initially set opacity to 0 */
-    animation: fadeInSmooth 2s ease-in-out forwards; /* Apply smooth fadeIn animation */
+    position: relative; /* Make sure container is positioned */
+    overflow: hidden; /* Hide overflow to ensure no extra content is visible */
     background-image: url('images/background.jpg');
 }
 
-@keyframes fadeInSmooth {
+/* Add an overlay to cover the background in pieces */
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* Adjust number of columns */
+    grid-template-rows: repeat(10, 1fr); /* Adjust number of rows */
+    gap: 0;
+    opacity: 0;
+    background-image: url('images/background.jpg'); /* Use the same background image */
+    background-size: cover;
+    animation: reveal 2s ease-in-out forwards; /* Apply animation */
+}
+
+#home::before {
+    opacity: 1; /* Ensure overlay is fully opaque */
+}
+
+/* Animation to reveal background in square pieces */
+@keyframes reveal {
     0% {
         opacity: 0;
-        transform: scale(0.95); /* Start slightly smaller for a smooth zoom-in effect */
-    }
-    50% {
-        opacity: 0.5;
-        transform: scale(1); /* Gradually scale to normal size */
+        transform: scale(1.2); /* Start slightly zoomed */
     }
     100% {
         opacity: 1;
-        transform: scale(1); /* End at full opacity and normal size */
+        transform: scale(1); /* End at normal size */
     }
 }
 
-
-
+/* Content styles */
 .content {
     text-align: left;
     color: white;
-    position:relative;
+    position: relative;
     top: 40%;
     transform: translateY(-50%);
     left: 20px; /* Adjust this value as needed */
     width: calc(100% - 70px); /* Adjust this value as needed */
-    font-size:larger;
-
-   
+    font-size: larger;
 }
+
 
 /* General styles */
 .about-container {
