@@ -1,20 +1,51 @@
-//Skill bar
 document.addEventListener("DOMContentLoaded", function() {
-    // Update these values to match your skill levels
-    var skillLevels = {
-        "skill1-progress": 95, // Skill 1: 80%
-        "skill2-progress": 75, // Skill 2: 60%
-        "skill3-progress": 95, // Skill 3: 90%
-        "skill4-progress": 85, // Skill 1: 80%
-        "skill5-progress": 75, // Skill 2: 60%
-        "skill6-progress": 85  // Skill 3: 90%
-        // Add more skills as needed
-    };
+    // Function to animate progress bars
+    function animateProgressBars(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Update these values to match your skill levels
+                var skillLevels = {
+                    "skill1-progress": 95,
+                    "skill2-progress": 75,
+                    "skill3-progress": 85,
+                    "skill4-progress": 60,
+                    "skill5-progress": 70,
+                    "skill6-progress": 80
+                };
 
-    for (var skill in skillLevels) {
-        document.getElementById(skill).style.width = skillLevels[skill] + "%";
+                for (var skill in skillLevels) {
+                    var progressElement = document.getElementById(skill);
+                    if (progressElement) {
+                        // Add a check to ensure the progress bar is not already animated
+                        if (progressElement.style.width === '') {
+                            progressElement.style.width = skillLevels[skill] + "%";
+                            progressElement.setAttribute("data-percentage", skillLevels[skill]);
+                        }
+                    }
+                }
+
+                // Stop observing once the animation has been triggered
+                observer.unobserve(entry.target);
+            }
+        });
+    }
+
+    // Create an intersection observer to trigger animation
+    const observer = new IntersectionObserver(animateProgressBars, {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger when 10% of the skills section is visible
+    });
+
+    // Target the skills section
+    const skillsSection = document.querySelector(".skills");
+    if (skillsSection) {
+        observer.observe(skillsSection);
+    } else {
+        console.error('Skills section not found.');
     }
 });
+
 
 // scrollbar
 document.addEventListener('DOMContentLoaded', () => {
