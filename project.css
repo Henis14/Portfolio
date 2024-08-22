@@ -80,3 +80,13 @@
         transform: translateX(-100%);
     }
 }
+
+.project-card {
+    perspective: 1000px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: rotateY(10deg) rotateX(5deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
