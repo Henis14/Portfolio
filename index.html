@@ -9,8 +9,20 @@
      <link rel="stylesheet" href="project.css">
      <link rel="stylesheet" href="profile.css">
     <link rel="icon" type="image/x-icon" href="images/fav.png" />
+    <script>
+        window.addEventListener('load', function() {
+            // Delay hiding the loader by 2 seconds (2000 milliseconds)
+            setTimeout(function() {
+                document.querySelector('.loader').style.display = 'none';
+            }, 1000);
+        });
+    </script>
+    
 </head>
 <body>
+    <div class="loader">
+        <div class="loader-circle"></div>
+    </div>
     <header>
         <nav>
             <button id="nav-toggle" aria-label="Toggle navigation menu">&#9776;</button>
@@ -33,31 +45,30 @@
 
     <section id="about">
         <h2>About Me</h2>
-    <div class="about-container">
-        <div class="about-card">
-            <img src="images/heniss.jpg" alt="Henis Dcosta" class="about-image">
-            <div class="about-content">
-                <p>Hi, I'm Henis Dcosta, a Computer Science student based in Ahmedabad, Gujarat. Currently studying at Indus University.</p>
-                <p>I'm passionate about Information Technology, specializing in web development and Database Administration. Driven by curiosity and a love for learning, I enjoy creating programming content and diving into front-end and back-end. As I venture into freelancing, I'm excited to apply my skills to new projects and collaborate with fellow innovators.</p>
-                <p>View and download my CV below to learn more about my journey! Let's connect and innovate together!</p>
-                <a href="files/res.pdf" target="_blank"><button>Download Resume</button></a>
+        <div class="about-container">
+            <div class="about-card">
+                <img src="images/heniss.jpg" alt="Henis Dcosta" class="about-image">
+                <div class="about-content">
+                    <p>Hi, I'm Henis D'costa, a Developer with a passion for back-end development, database administration, and front-end development. I'm currently pursuing a Master in Computer Application at Indus University, with a GPA of 9.96/10. I also hold a Bachelor's degree in Computer Application from St. Xavier's College.</p>
+                    <p>With extensive knowledge of database management, proficiency in back-end programming, and strong front-end development skills, I aim to leverage my technical expertise to contribute effectively to a dynamic team. Additionally, I have experience in data analysis and am actively enhancing my technical skills through certification courses.</p>
+                    <p>Some of my key technical skills include MySQL, PHP & Frameworks, .Net, Python, Angular, React, Kotlin, HTML, CSS, Javascript, Linux, Flutter, and MongoDB. I also excel in problem-solving, communication, leadership, and team handling.</p>
+                    <a href="files/res.pdf" target="_blank"><button>Download Resume</button></a>
+                </div>
             </div>
         </div>
-    </div>
-        <div class="profile-skills" >
-            
+        <div class="profile-skills">
             <div class="profile">
-              <u>  <h3>Profile</h3></u>
+                <u><h3>Profile</h3></u>
                 <ul>
                     <li>Name: Henis Dcosta</li>
                     <li>Email: henisdcosta02@gmail.com</li>
                     <li>Contact No: +91 8780983058</li>
-                    <li>Birthdate: February 14, 2003</li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/henisd14" target="_blank">linkedin.com/in/henisd14</a></li>
+                    <li>Education: BCA, MCA (Pursuing)</li>
                     <li>Current Work: Web Developer</li>
-                    <li>Education:BCA,MCA</li>
                 </ul>
             </div>
-            <div class="skills" >
+            <div class="skills">
                 <u><h3>Skills</h3></u>
                 <div class="skill">
                     <label for="skill1">Website Designing:</label>
@@ -68,7 +79,7 @@
                     </div>
                 </div>
                 <div class="skill">
-                    <label for="skill2">Android App:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <label for="skill2">Android App Development:</label>
                     <div class="progress-bar">
                         <div class="progress" id="skill2-progress" data-percentage="75">
                             <span class="progress-label">75%</span>
@@ -76,7 +87,7 @@
                     </div>
                 </div>
                 <div class="skill">
-                    <label for="skill3">Database Admin:&nbsp;&nbsp;&nbsp;</label>
+                    <label for="skill3">Database Administration:</label>
                     <div class="progress-bar">
                         <div class="progress" id="skill3-progress" data-percentage="90">
                             <span class="progress-label">90%</span>
@@ -84,36 +95,25 @@
                     </div>
                 </div>
                 <div class="skill">
-                    <label for="skill4">Microsoft Off :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <label for="skill4">Back-end Development:</label>
                     <div class="progress-bar">
-                        <div class="progress" id="skill4-progress" data-percentage="60">
-                            <span class="progress-label">60%</span>
+                        <div class="progress" id="skill4-progress" data-percentage="80">
+                            <span class="progress-label">80%</span>
                         </div>
                     </div>
                 </div>
                 <div class="skill">
-                    <label for="skill5">Networking:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <label for="skill5">Front-end Development:</label>
                     <div class="progress-bar">
                         <div class="progress" id="skill5-progress" data-percentage="70">
                             <span class="progress-label">70%</span>
                         </div>
                     </div>
                 </div>
-                <div class="skill">
-                    <label for="skill6">Backend Developing:</label>
-                    <div class="progress-bar">
-                        <div class="progress" id="skill6-progress" data-percentage="80">
-                            <span class="progress-label">80%</span>
-                        </div>
-                    </div>
-                </div>
             </div>
-            
-            
-            
-            
         </div>
     </section>
+    
     <!-- services -->
     <section id="services">
         <h2>Services</h2>
@@ -158,6 +158,16 @@
     <div class="projects-wrapper">
         <div class="projects-container">
             <!-- Project cards -->
+             
+            
+            <div class="project-card">
+                <h3></h3>
+                <img src="" alt="">
+                <p></p>
+                <div class="overlay-content">
+                    <!-- <a href="" class="overlay-link" target="_blank"></a> -->
+                </div>
+            </div>
             <div class="project-card">
                 <h3>DigiCard.inc</h3>
                 <img src="images/projects/logof.png" alt="DigiCard.inc">
@@ -166,21 +176,7 @@
                     <a href="https://henis14.github.io/Digicard/" class="overlay-link" target="_blank">Learn More</a>
                 </div>
             </div>
-            <!-- <div class="project-card">
-                <h3>DigiCard.inc</h3>
-                <img src="images/projects/logof.png" alt="DigiCard.inc">
-                <p>Digicard.inc aims to provide a platform where people can apply for credit cards & loans from different banks at one platform.</p>
-                <div class="overlay-content">
-                    <a href="https://henis14.github.io/Digicard/" class="overlay-link" target="_blank">Learn More</a>
-                </div>
-            </div><div class="project-card">
-                <h3>DigiCard.inc</h3>
-                <img src="images/projects/logof.png" alt="DigiCard.inc">
-                <p>Digicard.inc aims to provide a platform where people can apply for credit cards & loans from different banks at one platform.</p>
-                <div class="overlay-content">
-                    <a href="https://henis14.github.io/Digicard/" class="overlay-link" target="_blank">Learn More</a>
-                </div>
-            </div> -->
+            
             <div class="project-card">
                 <h3>Portfolio</h3>
                 <img src="images/projects/port.PNG" alt="Portfolio">
@@ -189,19 +185,29 @@
                     <a href="https://henis14.github.io/Techsolutions02.github.io/" class="overlay-link">Learn More</a>
                 </div>
             </div>
+
+            <div class="project-card">
+                <h3></h3>
+                <img src="" alt="">
+                <p></p>
+                <div class="overlay-content">
+                    <!-- <a href="" class="overlay-link" target="_blank"></a> -->
+                </div>
+            </div>
         </div>
     </div>
 </section>
     
     
 <!-- Contact -->
-    <section id="contact">
+<section id="contact">
     <h2>Contact Me <img src="images/gmail.png" class="gmail-image" alt="Gmail Logo"></h2>
     <div>
         <p>If you have any questions, please feel free to contact me via email:</p>
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=henisdcosta02@gmail.com" target="_blank" class="email-button">Send me an email</a>
     </div>
 </section>
+
     <button id="scrollToTopButton" onclick="scrollToTop()"></button>
     <!-- Footer -->
     <footer class="color">
