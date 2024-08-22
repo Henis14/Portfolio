@@ -20,6 +20,14 @@
     font-weight: bold;
 }
 
+.progress {
+    height: 100%;
+    background-color: #96DED1;
+    width: 0;
+    transition: width 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    position: relative;
+}
+
 /* Base Styles for Progress Bar */
 .progress-bar {
     flex-grow: 1; /* Allow progress bar to take remaining space */
@@ -78,9 +86,6 @@
     }
 }
 
-
-
-
 #services {
     padding: 20px;
     background-color: #f9f9f9;
@@ -106,21 +111,25 @@
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     flex: 0 0 auto;
-    scroll-snap-align:inherit;
+    scroll-snap-align: inherit;
     width: 300px;
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease; /* Smooth transition */
+    border: 1px solid #ddd; /* Default border */
+    position: relative; /* Ensure the card is properly positioned */
+    z-index: 1; /* Default z-index */
+    perspective: 1000px; /* Add perspective for 3D effect */
 }
 
+/* 3D hover effect */
 .service-card:hover {
-    transform: scale(1.05);
-}
-
-.service-card.active {
-    transform: scale(1.1);
-    z-index: 10;
-    position: relative;
+    transform: rotateX(15deg) rotateY(-15deg); /* Different 3D tilt effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    border: 3px solid #28a745; /* Green border on hover */
+    z-index: 10; /* Ensure the card appears above others */
+    margin-top: -5px; /* Prevent overlap with other content */
 }
 
 .service-card img {
@@ -138,6 +147,14 @@
     color: #555;
 }
 
+/* Active state (if needed) */
+.service-card.active {
+    transform: scale(1.1);
+    z-index: 10;
+    position: relative;
+}
+
+/* Responsive styles */
 @media (max-width: 768px) {
     .services-container {
         padding: 10px;
@@ -162,18 +179,26 @@
 }
 
 
+
+
+
+
 /* General styles */
 header {
     background: #333;
     color: #fff;
     padding: 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end; /* Align content to the right */
     align-items: center;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 999;
+}
+
+nav {
+    padding-right: 20px; /* Add padding to the right side of the nav container */
 }
 
 nav ul {
@@ -190,6 +215,7 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    padding-right: 10px; /* Add padding to the right side of the links */
 }
 
 /* Toggle button styles */
@@ -200,6 +226,8 @@ nav ul li a {
     color: #fff;
     font-size: 2rem;
     cursor: pointer;
+    position: absolute;
+    right: 1rem; /* Position toggle button on the right */
 }
 
 /* Mobile styles */
@@ -211,10 +239,11 @@ nav ul li a {
     nav {
         position: fixed;
         top: 0;
-        left: 0;
-        width: 100%;
+        right: 0; /* Align nav to the right side */
+        width: 80%; /* Adjust width as needed for mobile */
         background: #333; /* Background color for the navigation */
         z-index: 999; /* Ensure it's above other elements */
+        padding-right: 20px; /* Add padding to the right side in mobile view */
     }
 
     nav ul {
@@ -222,13 +251,13 @@ nav ul li a {
         padding: 0;
         margin: 0;
         display: none; /* Hide the navigation menu by default */
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: flex-end; /* Align menu items to the right */
+        padding: 1rem;
     }
 
     nav ul.show {
         display: flex; /* Show the navigation menu when the show class is applied */
-        flex-direction: column; /* Stack menu items vertically */
-        align-items: flex-end; /* Align menu items to the right */
-        padding: 1rem; /* Add padding for better spacing */
     }
 
     nav ul li {
@@ -241,6 +270,35 @@ nav ul li a {
         padding: 0.5rem 1rem; /* Adjust padding for menu items */
         display: block;
     }
+}
+
+
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: fixed;  /* Make it fixed to cover the entire viewport */
+    width: 100vw;     /* Full width */
+    top: 0;
+    left: 0;
+    background-color: white; /* Background color to cover content */
+    z-index: 9999;    /* High z-index to be on top of all content */
+}
+
+.loader-circle {
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 
