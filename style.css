@@ -1,3 +1,5 @@
+
+
 /* Reset some basic elements */
 body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     margin: 0;
@@ -258,6 +260,10 @@ body {
     position: relative; /* Make sure container is positioned */
     overflow: hidden; /* Hide overflow to ensure no extra content is visible */
     background-image: url('images/background.jpg');
+    
+        background-attachment: fixed;
+        background-size: cover;
+    
 }
 
 /* Add an overlay to cover the background in pieces */
@@ -324,6 +330,12 @@ body {
     border: 1px solid #ddd; /* Optional border for better distinction */
     border-radius: 10px; /* Rounded corners for the whole card */
     background-color: #fff; /* Background color for the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.about-card:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Add shadow to make it pop */
 }
 
 .about-image {
@@ -332,7 +344,6 @@ body {
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px 0 0 10px; /* Rounded corners on the left side */
 }
-
 
 .about-content {
     flex: 1;
@@ -434,8 +445,6 @@ body {
     }
 }
 
-
-
 /* Mobile styles */
 @media (max-width: 768px) {
     .about-card {
@@ -465,6 +474,7 @@ body {
         font-size: 1rem;
     }
 }
+
 
 /* Button to Up */
 #scrollToTopButton {
@@ -538,23 +548,23 @@ button:hover {
 }
 
 /* Projects */
-
-/* Projects */
 .projects-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Center the cards horizontally */
+    padding: 0 20px; /* Add padding to the left and right */
 }
 
 .project-card {
-    width: calc(100% - 20px); /* Full width on small screens */
-    max-width: 400px; /* Maximum width for each card (increased from 350px) */
-    max-height: 500px; /* Maximum height for each card (increased from 400px) */
+    width: calc(33.333% - 20px); /* Increased width to fit 3 cards more comfortably */
+    max-width: 700px; /* Maximum width for each card */
+    max-height: 550px; /* Increased maximum height for each card */
     margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     border-radius: 8px; /* Add rounded corners */
     overflow: hidden; /* Ensure the content doesn't overflow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease; /* Smooth transition on hover */
+    border: 1px solid transparent; /* Default border (transparent) */
 }
 
 .project-card img {
@@ -578,11 +588,32 @@ button:hover {
 .project-card:hover {
     transform: translateY(-5px); /* Move the card up */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+    border: 3px solid #3498db; /* Add blue border on hover */
 }
 
-@media (min-width: 768px) {
+/* 3D hover effect */
+.project-card {
+    perspective: 1000px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease; /* Ensure the border transition is smooth */
+}
+
+.project-card:hover {
+    transform: rotateY(10deg) rotateX(5deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 3px solid #3498db; /* Add blue border on hover */
+}
+
+/* Two columns on medium screens */
+@media (min-width: 768px) and (max-width: 1024px) {
     .project-card {
-        width: calc(50% - 20px); /* Two columns on medium screens */
+        width: calc(48% - 20px); /* Slightly increased width to fit 2 cards */
+    }
+}
+
+/* Full width on small screens */
+@media (max-width: 768px) {
+    .project-card {
+        width: calc(100% - 20px); /* Full width on small screens */
     }
 }
 
