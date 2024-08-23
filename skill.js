@@ -5,12 +5,12 @@ document.addEventListener("DOMContentLoaded", function() {
             if (entry.isIntersecting) {
                 // Update these values to match your skill levels
                 var skillLevels = {
-                    "skill1-progress": 95,
-                    "skill2-progress": 75,
-                    "skill3-progress": 85,
-                    "skill4-progress": 60,
-                    "skill5-progress": 70,
-                    "skill6-progress": 80
+                    "skill1-progress": 90,
+                    "skill2-progress": 80,
+                    "skill3-progress": 95,
+                    "skill4-progress": 90,
+                    "skill5-progress": 85,
+                    
                 };
 
                 for (var skill in skillLevels) {
@@ -91,4 +91,8 @@ window.addEventListener('scroll', function() {
     }
 });
 
+document.getElementById('nav-toggle').addEventListener('click', function() {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('show');
+});
 
