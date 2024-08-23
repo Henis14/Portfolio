@@ -231,19 +231,20 @@ nav ul li a {
 /* Toggle button styles */
 #nav-toggle {
     display: none;
-    background: none;
+    background: black;
     border: none;
     color: #fff;
-    font-size: 2rem;
-    cursor: pointer;
+    font-size: 1rem;
+    cursor: auto;
     position: absolute;
     right: 1rem; /* Position toggle button on the right */
+    top: 3rem;  /* Add some space from the top */
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
     #nav-toggle {
-        display:inline-flex;
+        display: inline-flex;
     }
 
     nav {
@@ -252,23 +253,29 @@ nav ul li a {
         right: 0; /* Align nav to the right side */
         width: 50%; /* Adjust width as needed for mobile */
         background: #333; /* Background color for the navigation */
-        opacity:95% ;
+        opacity: 95%;
         z-index: 999; /* Ensure it's above other elements */
         padding-right: 5px; /* Add padding to the right side in mobile view */
+        transform: translateY(-100%); /* Initially hide the menu off-screen */
+        transition: transform 0.3s ease-in-out; /* Smooth transition for sliding */
     }
 
     nav ul {
-        list-style:disc;
+        list-style: disc;
         padding: 0;
         margin: 0;
         display: none; /* Hide the navigation menu by default */
         flex-direction: column; /* Stack menu items vertically */
-        align-items:flex-start; /* Align menu items to the right */
+        align-items: flex-start; /* Align menu items to the right */
         padding: 1rem;
     }
 
     nav ul.show {
         display: flex; /* Show the navigation menu when the show class is applied */
+    }
+
+    nav.show {
+        transform: translateY(50px); /* Slide down the menu when shown */
     }
 
     nav ul li {
@@ -282,6 +289,7 @@ nav ul li a {
         display: block;
     }
 }
+
 
 
 
