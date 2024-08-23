@@ -3,16 +3,6 @@ window.addEventListener('load', function() {
     document.getElementById('loader').style.display = 'none';
 });
 
-// Form submission handler
-document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    alert('Form submitted!');
-});
-
-
-
-
-
 // up button
 // Function to scroll to the top of the page
 function scrollToTop() {
@@ -40,10 +30,7 @@ const scrollToTopButton = document.getElementById('scrollToTopButton');
             });
         });
 
-
-
-
- //Skill bar
+//Skill bar
  document.addEventListener('DOMContentLoaded', () => {
     const progressBars = document.querySelectorAll('.progress');
     progressBars.forEach(bar => {
@@ -52,20 +39,4 @@ const scrollToTopButton = document.getElementById('scrollToTopButton');
     });
 });
 
-// show content
-const projectCards = document.querySelectorAll('.project-card');
-
-    projectCards.forEach(card => {
-        const overlayContent = card.querySelector('.overlay-content');
-        const learnMoreLink = card.querySelector('.overlay-link');
-
-        learnMoreLink.addEventListener('click', function(event) {
-            event.preventDefault();
-            overlayContent.style.display = 'flex';
-        });
-
-        overlayContent.addEventListener('click', function() {
-            overlayContent.style.display = 'none';
-        });
-    });
 
