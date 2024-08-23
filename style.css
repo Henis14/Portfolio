@@ -548,23 +548,28 @@ button:hover {
 }
 
 /* Projects */
+.projects-wrapper {
+    overflow: visible; /* Remove hidden overflow */
+    padding: 10px 0; /* Optional: Add some vertical padding */
+    width: 100%; /* Ensure full width */
+}
+
 .projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center the cards horizontally */
-    padding: 0 20px; /* Add padding to the left and right */
+    display: flex; /* Keep the flex layout */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: center; /* Center the items horizontally */
 }
 
 .project-card {
-    width: calc(33.333% - 20px); /* Increased width to fit 3 cards more comfortably */
-    max-width: 700px; /* Maximum width for each card */
-    max-height: 550px; /* Increased maximum height for each card */
+    width: calc(33.333% - 20px); /* Adjust width to fit 3 cards */
+    max-width: 700px; /* Set maximum width */
+    max-height: 550px; /* Set maximum height */
     margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    border-radius: 8px; /* Add rounded corners */
-    overflow: hidden; /* Ensure the content doesn't overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevent content overflow */
     transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease; /* Smooth transition on hover */
-    border: 1px solid transparent; /* Default border (transparent) */
+    border: 1px solid transparent; /* Default border */
 }
 
 .project-card img {
@@ -617,8 +622,7 @@ button:hover {
     }
 }
 
-
-/* Image */
+/* Image container */
 .image-container {
     position: relative;
     display: inline-block;
@@ -664,8 +668,6 @@ button:hover {
 .image-container:hover .overlay {
     opacity: 1;
 }
-
-
 
 .overlay-link {
     color: black; /* Set the color to black */
