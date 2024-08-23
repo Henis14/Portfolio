@@ -1,15 +1,14 @@
-/* Projects container with horizontal scrolling */
+/* Projects wrapper without scrolling effect */
 .projects-wrapper {
-    overflow: hidden; /* Hide default scrollbar */
-    position: relative; /* Position for the custom scroll buttons */
+    overflow: visible; /* Remove hidden overflow */
     padding: 10px 0; /* Optional: Add some vertical padding */
-    width: 100%; /* Ensure full width for scrolling */
+    width: 100%; /* Ensure full width for the container */
 }
 
 .projects-container {
-    display: inline-flex; /* Keep items in a row */
-    flex-wrap: nowrap; /* Prevent wrapping */
-    animation: scroll 80s linear infinite; /* Apply scrolling animation with total duration */
+    display: flex; /* Use flexbox to keep items in a row */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: center; /* Center the items horizontally */
 }
 
 .project-card {
@@ -65,22 +64,7 @@
     text-decoration: underline; /* Underline the link */
 }
 
-/* Keyframes for scrolling effect */
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    40% {
-        transform: translateX(-50%);
-    }
-    60% {
-        transform: translateX(-50%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
+/* 3D hover effect */
 .project-card {
     perspective: 1000px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
