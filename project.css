@@ -3,24 +3,32 @@
     overflow: visible; /* Remove hidden overflow */
     padding: 10px 0; /* Optional: Add some vertical padding */
     width: 100%; /* Ensure full width for the container */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .projects-container {
     display: flex; /* Use flexbox to keep items in a row */
     flex-wrap: wrap; /* Allow wrapping of items */
     justify-content: center; /* Center the items horizontally */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .project-card {
-    display: inline-block; /* Keep each card in a row */
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: space-between; /* Space out the content vertically */
     width: 250px; /* Adjust width */
-    height: 350px; /* Adjust height */
+    height: 300px; /* Reduced height */
     margin: 10px; /* Margin around each card */
+    padding: 15px; /* Add padding inside the card */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     border: 1px solid rgba(0, 0, 0, 0.2); /* Add a subtle border */
     border-radius: 8px; /* Add rounded corners */
     overflow: hidden; /* Ensure the content doesn't overflow */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    text-align: center; /* Center text within the card */
 }
 
 .project-card img {
@@ -28,16 +36,47 @@
     height: auto; /* Maintain aspect ratio */
     border-top-left-radius: 8px; /* Round the corners of the image */
     border-top-right-radius: 8px;
+    max-height: 100px; /* Reduced image height to fit smaller cards */
+    object-fit: cover; /* Ensure image covers the area without distortion */
 }
 
 .project-card h3 {
-    margin: 15px;
-    font-size: 18px; /* Adjust font size for headings */
+    margin: 10px 0 8px; /* Adjusted margins for heading */
+    font-size: 16px; /* Adjust font size for headings */
+    font-weight: 600; /* Bold heading for better readability */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .project-card p {
-    margin: 0 15px 15px; /* Some bottom margin */
-    font-size: 14px; /* Adjust font size for paragraph */
+    margin: 0 0 10px; /* Adjusted margin for spacing between text and link */
+    font-size: 13px; /* Adjust font size for paragraph */
+    font-weight: 400; /* Regular font weight for paragraphs */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    flex-grow: 1; /* Allow the paragraph to take up available space */
+}
+
+.overlay-content {
+    text-align: center;
+    margin-top: auto; /* Push the overlay content to the bottom */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+}
+
+.overlay-link {
+    color: black; /* Set the color to black */
+    text-decoration: underline; /* Underline the link */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font to h2 */
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font to h3 */
+}
+
+p {
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font to p */
 }
 
 /* Hover effect */
@@ -49,25 +88,17 @@
 /* Media query for larger screens */
 @media (min-width: 768px) {
     .project-card {
-        width: 300px; /* Adjust width for larger screens */
-        height: 400px; /* Adjust height for larger screens */
+        width: 280px; /* Adjust width for larger screens */
+        height: 350px; /* Adjust height for larger screens */
+        font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
     }
-}
-
-/* Overlay styles */
-.overlay-content {
-    text-align: center;
-}
-
-.overlay-link {
-    color: black; /* Set the color to black */
-    text-decoration: underline; /* Underline the link */
 }
 
 /* 3D hover effect */
 .project-card {
     perspective: 1000px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .project-card:hover {
