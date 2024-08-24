@@ -1,9 +1,15 @@
+/* Global font style */
+html, body {
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font globally */
+}
+
 /* Skills section */
 .skills {
     margin-top: 20px;
     border: 2px solid #ccc;
     border-radius: 10px;
     padding: 10px; /* Added padding for better spacing */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .skill {
@@ -12,10 +18,12 @@
     margin-bottom: 10px; /* Margin for spacing between skills */
     flex-direction: column; /* Stack label and progress bar vertically */
     width: 100%;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .skill-label {
     flex-basis: 250px; /* Further increased width for label column */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .skill label {
@@ -23,6 +31,7 @@
     font-weight: bold;
     margin-bottom: 5px; /* Add margin between label and progress bar */
     font-size: 1rem; /* Ensure consistent font size */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 /* Base Styles for Progress Bar */
@@ -35,6 +44,7 @@
     position: relative;
     margin-left: 0; /* Center the progress bar under the label */
     width: 100%; /* Full width of the container */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .progress {
@@ -49,6 +59,7 @@
     font-size: 0.9rem;
     transition: width 1s ease-in-out;
     width: 0; /* Start with 0 width */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .progress-label {
@@ -61,27 +72,32 @@
     font-size: 0.8em;
     color: #000; /* Black color for the percentage text */
     font-weight: bold; /* Bold percentage text */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .skill {
         flex-direction: column; /* Stack items vertically on smaller screens */
+        font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
     }
 
     .skill-label {
         flex-basis: auto; /* Allow label to take full width on smaller screens */
         margin-bottom: 5px; /* Add some spacing between label and progress bar */
+        font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
     }
 
     .progress-bar {
         margin-left: 0; /* Remove left margin on progress bar */
         margin-top: 10px; /* Add space between label and progress bar */
         width: 100%; /* Full width of the container */
+        font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
     }
 
     .progress {
         justify-content: center; /* Center the text inside the progress bar */
+        font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
     }
 
     .progress-label {
@@ -91,18 +107,22 @@
         top: 50%;
         transform: translateY(-50%); /* Vertically center the text */
         margin-top: 0; /* Remove any margin */
+        font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
     }
 }
 
 @media (max-width: 480px) {
     .progress-label {
         font-size: 0.75em; /* Further adjust font size for very small screens */
+        font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
     }
 }
 
+/* Services section */
 #services {
     padding: 20px;
     background-color: #f9f9f9;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .services-container {
@@ -113,6 +133,7 @@
     padding-bottom: 20px;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .services-container::-webkit-scrollbar {
@@ -123,7 +144,7 @@
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     flex: 0 0 auto;
     scroll-snap-align: inherit;
     width: 300px;
@@ -133,28 +154,32 @@
     transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease; /* Smooth transition */
     position: relative; /* Ensure the card is properly positioned */
     z-index: 1; /* Default z-index */
-}
-
-/* Simple hover effect */
-.service-card:hover {
-    transform: scale(1.05); /* Slightly increase the size on hover */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a soft shadow on hover */
-    border: 1px solid #28a745; /* Green border on hover */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .service-card img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .service-card h3 {
     margin: 15px 0;
     font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .service-card p {
     color: #555;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+}
+
+/* Hover effect */
+.service-card:hover {
+    transform: translateY(-5px); /* Slightly lift the card on hover */
+    border: 2px solid #28a745; /* Green border on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 /* Active state (if needed) */
@@ -162,6 +187,7 @@
     transform: scale(1.1);
     z-index: 10;
     position: relative;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 /* Responsive styles */
@@ -169,11 +195,13 @@
     .services-container {
         padding: 10px;
         gap: 10px;
+        font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
     }
 
     .service-card {
         width: 250px;
         padding: 15px;
+        font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
     }
 }
 
@@ -181,17 +209,14 @@
     .service-card {
         width: 200px;
         padding: 10px;
+        font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
     }
 
     .service-card h3 {
         font-size: 1.2em;
+        font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
     }
 }
-
-
-
-
-
 
 /* General styles */
 header {
@@ -205,10 +230,12 @@ header {
     top: 0;
     width: 100%;
     z-index: 999;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 nav {
     padding-right: 20px; /* Add padding to the right side of the nav container */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 nav ul {
@@ -216,16 +243,19 @@ nav ul {
     display: flex;
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 nav ul li {
     margin: 0 1rem;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     padding-right: 10px; /* Add padding to the right side of the links */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 /* Toggle button styles */
@@ -239,12 +269,14 @@ nav ul li a {
     position: absolute;
     right: 1rem; /* Position toggle button on the right */
     top: 3rem;  /* Add some space from the top */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
     #nav-toggle {
         display: inline-flex;
+        font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
     }
 
     nav {
@@ -258,6 +290,7 @@ nav ul li a {
         padding-right: 5px; /* Add padding to the right side in mobile view */
         transform: translateY(-100%); /* Initially hide the menu off-screen */
         transition: transform 0.3s ease-in-out; /* Smooth transition for sliding */
+        font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
     }
 
     nav ul {
@@ -268,18 +301,22 @@ nav ul li a {
         flex-direction: column; /* Stack menu items vertically */
         align-items: flex-start; /* Align menu items to the right */
         padding: 1rem;
+        font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
     }
 
     nav ul.show {
         display: flex; /* Show the navigation menu when the show class is applied */
+        font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
     }
 
     nav.show {
         transform: translateY(50px); /* Slide down the menu when shown */
+        font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
     }
 
     nav ul li {
         margin: 0.5rem 0; /* Add margin between menu items */
+        font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
     }
 
     nav ul li a {
@@ -287,12 +324,11 @@ nav ul li a {
         text-decoration: none;
         padding: 0.5rem 1rem; /* Adjust padding for menu items */
         display: block;
+        font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
     }
 }
 
-
-
-
+/* Loader styles */
 .loader {
     display: flex;
     align-items: center;
@@ -304,6 +340,7 @@ nav ul li a {
     left: 0;
     background-color: white; /* Background color to cover content */
     z-index: 9999;    /* High z-index to be on top of all content */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .loader-circle {
@@ -313,13 +350,10 @@ nav ul li a {
     width: 60px;
     height: 60px;
     animation: spin 1s linear infinite;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-
-
-
-
