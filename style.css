@@ -1,21 +1,27 @@
-
+/* Global font style */
+html, body {
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font globally */
+}
 
 /* Reset some basic elements */
 body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 /* Basic body styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
 }
+
 /* Section styling */
 section {
     padding: 2rem;
     text-align: center;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 section:nth-of-type(even) {
@@ -28,6 +34,7 @@ section:nth-of-type(even) {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .about-image img {
@@ -38,29 +45,26 @@ section:nth-of-type(even) {
 .about-content {
     max-width: 600px;
     margin: 1rem;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
-
-
-
-
-
-
-
 
 /* Project styling */
 .project {
     margin: 2rem 0;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 /* Contact form styling */
 form {
     max-width: 600px;
     margin: 0 auto;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 form label {
     display: block; /* Display labels as block elements */
     margin-bottom: 0.5rem; /* Add spacing between labels and input fields */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 form input[type="text"],
@@ -72,6 +76,7 @@ form textarea {
     box-sizing: border-box; /* Ensure padding doesn't affect width */
     border: 1px solid #ccc; /* Add a border */
     border-radius: 5px; /* Apply curved edges */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 form button {
@@ -81,6 +86,7 @@ form button {
     border: none;
     cursor: pointer;
     border-radius: 5px; /* Apply curved edges */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 form button:hover {
@@ -91,10 +97,12 @@ form button:hover {
 form div {
     display: flex;
     flex-direction: column;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 form div label {
     align-self: flex-start; /* Align labels to the start of the flex container */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 /* Responsive styles */
@@ -109,8 +117,6 @@ form div label {
         width: 100%; /* Full width on smaller screens */
     }
 }
-
-
 
 /* Button to up */
 #scrollToTopButton {
@@ -143,6 +149,7 @@ form div label {
     align-items: center; /* Center content vertically */
     position: relative;
     flex-direction: row; /* Arrange items in a row */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .footer-content {
@@ -150,21 +157,25 @@ form div label {
     align-items: center;
     flex-direction: row; /* Arrange text and social links horizontally */
     align-items: center;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .footer-content p {
     margin: 0;
     padding-right: 1rem; /* Add padding to the right of the text */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .social-links {
     display: flex;
     align-items: center;
     justify-content: center; /* Center social links horizontally */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .social-links a {
     margin: 0 5px;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .social-links img {
@@ -196,22 +207,17 @@ form div label {
     }
 }
 
-
 /* General styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
 section {
     padding: 20px;
     text-align: center;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 h2 {
     font-size: 2em;
     margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 /* Responsive adjustments */
@@ -219,6 +225,7 @@ h2 {
     .skills {
         padding: 5px; /* Adjust padding for smaller screens */
         border-width: 1px; /* Adjust border width for smaller screens */
+        font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
     }
 
     .skill {
@@ -241,13 +248,10 @@ h2 {
 }
 
 /* Background image */
-
 body {
     margin: 0;
     padding: 0;
 }
-
-
 
 /* Container for background image */
 #home {
@@ -260,10 +264,9 @@ body {
     position: relative; /* Make sure container is positioned */
     overflow: hidden; /* Hide overflow to ensure no extra content is visible */
     background-image: url('images/background.jpg');
-    
-        background-attachment: fixed;
-        background-size: cover;
-    
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 /* Add an overlay to cover the background in pieces */
@@ -310,15 +313,16 @@ body {
     left: 20px; /* Adjust this value as needed */
     width: calc(100% - 70px); /* Adjust this value as needed */
     font-size: larger;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
-
-/* General styles */
+/* About section */
 .about-container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     padding: 1rem; /* Add padding for better spacing on mobile */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .about-card {
@@ -331,6 +335,7 @@ body {
     border-radius: 10px; /* Rounded corners for the whole card */
     background-color: #fff; /* Background color for the card */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth hover effect */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .about-card:hover {
@@ -343,6 +348,7 @@ body {
     max-width: 250px; /* Limit the maximum width */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px 0 0 10px; /* Rounded corners on the left side */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .about-content {
@@ -353,10 +359,12 @@ body {
     text-align: justify;
     line-height: 1.6;
     margin-left: 20px;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .about-content p {
     margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .about-content button {
@@ -368,37 +376,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-.about-content button:hover {
-    background-color: #555;
-}
-
-/* General styles for .about-content */
-.about-content {
-    flex: 1;
-    padding: 20px;
-    border-radius: 0 10px 10px 0; /* Rounded corners on the right side */
-    background-color: #f9f9f9;
-    text-align: justify;
-    line-height: 1.6;
-    margin-left: 20px;
-}
-
-.about-content p {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-
-.about-content button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .about-content button:hover {
@@ -475,7 +453,6 @@ body {
     }
 }
 
-
 /* Button to Up */
 #scrollToTopButton {
     position: fixed;
@@ -510,7 +487,6 @@ body {
     }
 }
 
-
 /* Button styles */
 button {
     background: linear-gradient(to right, #4CAF50, #2196F3); /* Gradient background */
@@ -526,6 +502,7 @@ button {
     border-radius: 10px;
     transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for background and box-shadow */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 button:hover {
@@ -541,7 +518,6 @@ button:hover {
     }
 }
 
-
 /* Change the color of the button when hovered */
 button:hover {
     background-color: #45a049; /* Darker green */
@@ -552,12 +528,14 @@ button:hover {
     overflow: visible; /* Remove hidden overflow */
     padding: 10px 0; /* Optional: Add some vertical padding */
     width: 100%; /* Ensure full width */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .projects-container {
     display: flex; /* Keep the flex layout */
     flex-wrap: wrap; /* Allow wrapping of items */
     justify-content: center; /* Center the items horizontally */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .project-card {
@@ -570,6 +548,7 @@ button:hover {
     overflow: hidden; /* Prevent content overflow */
     transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease; /* Smooth transition on hover */
     border: 1px solid transparent; /* Default border */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .project-card img {
@@ -577,16 +556,19 @@ button:hover {
     height: auto; /* Maintain aspect ratio */
     border-top-left-radius: 8px; /* Round the corners of the image */
     border-top-right-radius: 8px;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .project-card h3 {
     margin: 15px;
     font-size: 20px; /* Increased font size for headings */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .project-card p {
     margin: 0 15px 15px; /* Some bottom margin */
     font-size: 16px; /* Increased font size for paragraph */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 /* Hover effect */
@@ -626,6 +608,7 @@ button:hover {
 .image-container {
     position: relative;
     display: inline-block;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 /* Style for the image */
@@ -633,6 +616,7 @@ button:hover {
     display: block;
     width: 100%;
     height: auto;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 /* Style for the overlay */
@@ -650,11 +634,13 @@ button:hover {
     align-items: center;
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s ease;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 /* Style for the overlay content */
 .overlay-content {
     text-align: center;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 /* Style for the link */
@@ -662,6 +648,7 @@ button:hover {
     color: #fff;
     text-decoration: underline;
     margin-top: 10px;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 /* Show overlay on hover */
@@ -690,6 +677,7 @@ button:hover {
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, color 0.3s ease; /* Added background transition */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .email-button:hover {
@@ -704,6 +692,7 @@ button:hover {
     outline: none; /* Remove focus outline */
 }
 
+/* Responsive styles */
 @media (max-width: 600px) {
     .email-button {
         font-size: 14px;
@@ -711,25 +700,26 @@ button:hover {
     }
 }
 
-
-
-
-/* service images */
+/* Service images */
 .short-image {
     width: 80px; /* Set the desired width */
     height: 70px; /* Let the height adjust proportionally */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .dba-image{
     width: 80px; /* Set the desired width */
     height: 95px;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
+
 .gmail-image {
     width: 38px; /* Adjust the width as needed */
     height: 40px; /* Adjust the height as needed */
     vertical-align: middle; /* Align the image vertically in the middle of the text */
     margin-left: 10px; /* Add some space between the text and the image */
     transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease; /* Smooth transition on hover */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
 
 .gmail-image:hover {
@@ -743,6 +733,3 @@ button:hover {
         height: 32px; /* Adjust height for smaller screens */
     }
 }
-
-
-
