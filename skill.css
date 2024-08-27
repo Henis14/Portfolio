@@ -120,7 +120,7 @@ html, body {
 
 /* Services section */
 #services {
-    padding: 20px;
+    padding: 45px;;
     background-color: #f9f9f9;
     font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
@@ -130,6 +130,7 @@ html, body {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 20px;
+    padding-top: 20px;
     padding-bottom: 20px;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
