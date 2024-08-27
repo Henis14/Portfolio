@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     "skill2-progress": 80,
                     "skill3-progress": 95,
                     "skill4-progress": 90,
-                    "skill5-progress": 85,
+                    "skill5-progress": 90,
                     
                 };
 
