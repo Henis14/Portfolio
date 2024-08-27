@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (entry.isIntersecting) {
                 // Update these values to match your skill levels
                 var skillLevels = {
-                    "skill1-progress": 90,
+                    "skill1-progress": 85,
                     "skill2-progress": 80,
                     "skill3-progress": 95,
                     "skill4-progress": 90,
