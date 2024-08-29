@@ -15,6 +15,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.forEach(link => link.classList.remove('active')); // Remove active class from all links
+            this.classList.add('active'); // Add active class to the clicked link
+        });
+    });
+});
+
+
 window.addEventListener('scroll', function() {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -36,6 +49,10 @@ window.addEventListener('scroll', function() {
     });
 });
 
-
+document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('active'); // Toggle the active class
+    });
+});
 
 
