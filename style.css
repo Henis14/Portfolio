@@ -176,10 +176,18 @@ form div label {
 .social-links a {
     margin: 0 5px;
     font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for the 3D effect */
 }
 
 .social-links img {
     width: 30px;
+    display: block;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px) rotateX(15deg) rotateY(15deg); /* 3D effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
 }
 
 /* Responsive design */
