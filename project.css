@@ -11,6 +11,7 @@
     flex-wrap: wrap; /* Allow wrapping of items */
     justify-content: center; /* Center the items horizontally */
     font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    padding-top: 20px;
 }
 
 .project-card {
@@ -104,4 +105,214 @@ p {
 .project-card:hover {
     transform: rotateY(10deg) rotateX(5deg);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+
+.faqs {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.faq-question {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    display: none; /* Hide the answer by default */
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.8; /* Increase line height for better readability */
+    padding-left: 1rem; /* Indent the answer slightly */
+    position: relative; /* Make the position relative for proper alignment */
+}
+
+.faq-answer::before {
+    content: '- '; /* Add a dash before each list item */
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: -1rem; /* Adjust the position to align with the text */
+}
+
+.faq-item.active .faq-answer {
+    display: block; /* Show the answer when the item is active */
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg); /* Rotate the + symbol to an x */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .faq-question {
+        font-size: 1rem; /* Slightly smaller font size for mobile */
+        padding: 0.4rem; /* Reduce padding */
+    }
+
+    .faq-toggle {
+        font-size: 1.2rem; /* Adjust the toggle size */
+    }
+
+    .faq-answer {
+        font-size: 0.9rem; /* Slightly smaller font size for answers */
+        margin-top: 0.4rem;
+        padding-left: 0.8rem; /* Adjust padding for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-question {
+        font-size: 0.9rem; /* Further reduce font size for smaller screens */
+        padding: 0.3rem; /* Reduce padding */
+    }
+
+    .faq-toggle {
+        font-size: 1rem; /* Adjust the toggle size */
+    }
+
+    .faq-answer {
+        font-size: 0.85rem; /* Further reduce font size for answers */
+        margin-top: 0.3rem;
+        padding-left: 0.5rem; /* Adjust padding for small screens */
+    }
+}
+
+
+:root {
+    --border-color: rgba(0, 123, 255, 0.5);
+}
+
+.contact-container {
+    max-width: 800px; /* Limit the width of the container */
+    margin: 2rem auto; /* Center the container with auto margin */
+    padding: 2rem; /* Add padding for top, bottom, and sides */
+    background-color: #fff; /* Set background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Create a subtle shadow effect */
+    border-radius: 10px; /* Round the corners */
+    border: 2px solid var(--border-color); /* Use CSS variable for border color */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    position: relative;
+    overflow: hidden; /* Hide any overflow from pseudo-elements */
+    transition: border-color 0.3s ease;
+}
+
+.contact-container::before, .contact-container::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition: transform 0.5s ease;
+}
+
+.contact-container::before {
+    border-top: 2px solid var(--border-color);
+    border-left: 2px solid var(--border-color);
+    transform: scale(0);
+}
+
+.contact-container::after {
+    border-bottom: 2px solid var(--border-color);
+    border-right: 2px solid var(--border-color);
+    transform: scale(0);
+}
+
+.contact-container:hover::before, .contact-container:hover::after {
+    transform: scale(1);
+}
+
+.contact-container h2 {
+    margin-bottom: 1.5rem; /* Space between the heading and content */
+    font-size: 1.8rem; /* Adjust font size for heading */
+    color: #333; /* Set heading color */
+}
+
+.contact-container p {
+    margin-bottom: 1rem; /* Space between paragraphs and other elements */
+    font-size: 1rem; /* Adjust the font size */
+    color: #555; /* Set a neutral text color */
+}
+
+.email-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem; /* Add padding for the button */
+    font-size: 1rem; /* Set font size */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff; /* Button background color */
+    border-radius: 5px; /* Rounded corners for the button */
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transition for hover effects */
+}
+
+.email-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 1.5rem; /* Reduce padding on smaller screens */
+        margin: 1.5rem auto; /* Adjust margin for better spacing */
+    }
+
+    .contact-container h2 {
+        font-size: 1.6rem; /* Adjust font size for heading */
+    }
+
+    .contact-container p {
+        font-size: 0.95rem; /* Slightly reduce the font size */
+    }
+
+    .email-button {
+        padding: 0.6rem 1.2rem; /* Adjust padding for the button */
+        font-size: 0.95rem; /* Adjust font size for the button */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        padding: 1rem; /* Further reduce padding on very small screens */
+        margin: 1rem auto; /* Adjust margin */
+    }
+
+    .contact-container h2 {
+        font-size: 1.4rem; /* Reduce font size for heading */
+    }
+
+    .contact-container p {
+        font-size: 0.9rem; /* Reduce the font size */
+    }
+
+    .email-button {
+        padding: 0.5rem 1rem; /* Adjust padding for the button */
+        font-size: 0.9rem; /* Further reduce font size for the button */
+    }
 }
