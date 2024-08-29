@@ -330,6 +330,57 @@ nav ul li a {
     }
 }
 
+.nav-link.active {
+    font-weight: bold;
+    background: linear-gradient(90deg, #FFD700, #FF6347, #FFD700);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 2s infinite linear;
+    position: relative; /* Position relative to allow positioning of the white line */
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Position the line slightly below the text */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff; /* White line color */
+    border-radius: 1px; /* Optional: round the edges of the line */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the line */
+    transform: scaleX(0); /* Start with the line hidden */
+    transform-origin: center; /* Transform from the center */
+}
+
+.nav-link.active:hover::after {
+    transform: scaleX(1); /* Expand the line on hover */
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200%;
+    }
+    100% {
+        background-position: -200%;
+    }
+}
+
+/* Navigation bar background color */
+
+
+/* Default state for nav links */
+.nav-link {
+    color: #ccc; /* Light grey color for non-active links */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for non-active links */
+.nav-link:hover {
+    color: #FFD700; /* Gold color on hover */
+}
 /* Loader styles */
 .loader {
     display: flex;
