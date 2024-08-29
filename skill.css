@@ -120,7 +120,8 @@ html, body {
 
 /* Services section */
 #services {
-    padding: 45px;;
+  padding-top: 6%;
+    padding-bottom: 4%;
     background-color: #f9f9f9;
     font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
