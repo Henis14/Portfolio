@@ -120,7 +120,7 @@ html, body {
 
 /* Services section */
 #services {
-  padding-top: 6%;
+    padding-top: 6%;
     padding-bottom: 4%;
     background-color: #f9f9f9;
     font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
@@ -132,7 +132,7 @@ html, body {
     scroll-snap-type: x mandatory;
     gap: 20px;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
     font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
@@ -330,6 +330,7 @@ nav ul li a {
     }
 }
 
+
 .nav-link.active {
     font-weight: bold;
     background: linear-gradient(90deg, #FFD700, #FF6347, #FFD700);
@@ -381,6 +382,9 @@ nav ul li a {
 .nav-link:hover {
     color: #FFD700; /* Gold color on hover */
 }
+
+
+
 /* Loader styles */
 .loader {
     display: flex;
