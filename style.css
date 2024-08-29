@@ -218,8 +218,9 @@ form div label {
 
 /* General styles */
 section {
-     padding-top: 5%;
+    padding-top: 5%;
     padding-bottom: 5%;
+    
     text-align: center;
     font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
 }
