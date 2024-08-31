@@ -218,32 +218,6 @@ p {
     transition: border-color 0.3s ease;
 }
 
-.contact-container::before, .contact-container::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    transition: transform 0.5s ease;
-}
-
-.contact-container::before {
-    border-top: 2px solid var(--border-color);
-    border-left: 2px solid var(--border-color);
-    transform: scale(0);
-}
-
-.contact-container::after {
-    border-bottom: 2px solid var(--border-color);
-    border-right: 2px solid var(--border-color);
-    transform: scale(0);
-}
-
-.contact-container:hover::before, .contact-container:hover::after {
-    transform: scale(1);
-}
 
 .contact-container h2 {
     margin-bottom: 1.5rem; /* Space between the heading and content */
