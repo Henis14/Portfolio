@@ -202,91 +202,47 @@ p {
 
 :root {
     --border-color: rgba(0, 123, 255, 0.5);
+    --glow-color: rgba(0, 123, 255, 0.7); /* Color for the glowing border */
+   
 }
 
+/* Contact container styling */
 .contact-container {
-    max-width: 800px; /* Limit the width of the container */
-    margin: 2rem auto; /* Center the container with auto margin */
-    padding: 2rem; /* Add padding for top, bottom, and sides */
-    background-color: #fff; /* Set background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Create a subtle shadow effect */
-    border-radius: 10px; /* Round the corners */
-    border: 2px solid var(--border-color); /* Use CSS variable for border color */
-    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    border: 2px solid var(--border-color);
+    font-family: 'Montserrat', sans-serif;
     position: relative;
-    overflow: hidden; /* Hide any overflow from pseudo-elements */
-    transition: border-color 0.3s ease;
+    overflow: hidden;
+    transition: background 0.5s ease, box-shadow 0.5s ease;
 }
 
-
-.contact-container h2 {
-    margin-bottom: 1.5rem; /* Space between the heading and content */
-    font-size: 1.8rem; /* Adjust font size for heading */
-    color: #333; /* Set heading color */
+/* Hover effect for gradient background sweep */
+.contact-container:hover {
+    background: var(--bg-gradient);
+    box-shadow: 0 0 15px var(--glow-color);
 }
 
-.contact-container p {
-    margin-bottom: 1rem; /* Space between paragraphs and other elements */
-    font-size: 1rem; /* Adjust the font size */
-    color: #555; /* Set a neutral text color */
+/* Static border glow */
+.contact-container::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    border-radius: 15px;
+    border: 2px solid var(--glow-color);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.5s ease;
 }
 
-.email-button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem; /* Add padding for the button */
-    font-size: 1rem; /* Set font size */
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    background-color: #007bff; /* Button background color */
-    border-radius: 5px; /* Rounded corners for the button */
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transition for hover effects */
-}
-
-.email-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: translateY(-2px); /* Slight lift on hover */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .contact-container {
-        padding: 1.5rem; /* Reduce padding on smaller screens */
-        margin: 1.5rem auto; /* Adjust margin for better spacing */
-    }
-
-    .contact-container h2 {
-        font-size: 1.6rem; /* Adjust font size for heading */
-    }
-
-    .contact-container p {
-        font-size: 0.95rem; /* Slightly reduce the font size */
-    }
-
-    .email-button {
-        padding: 0.6rem 1.2rem; /* Adjust padding for the button */
-        font-size: 0.95rem; /* Adjust font size for the button */
-    }
-}
-
-@media (max-width: 480px) {
-    .contact-container {
-        padding: 1rem; /* Further reduce padding on very small screens */
-        margin: 1rem auto; /* Adjust margin */
-    }
-
-    .contact-container h2 {
-        font-size: 1.4rem; /* Reduce font size for heading */
-    }
-
-    .contact-container p {
-        font-size: 0.9rem; /* Reduce the font size */
-    }
-
-    .email-button {
-        padding: 0.5rem 1rem; /* Adjust padding for the button */
-        font-size: 0.9rem; /* Further reduce font size for the button */
-    }
+/* Add border glow when hovering */
+.contact-container:hover::before {
+    opacity: 1;
 }
