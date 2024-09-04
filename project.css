@@ -90,7 +90,7 @@ p {
 @media (min-width: 768px) {
     .project-card {
         width: 280px; /* Adjust width for larger screens */
-        height: 350px; /* Adjust height for larger screens */
+        height: 310px; /* Adjust height for larger screens */
         font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
     }
 }
