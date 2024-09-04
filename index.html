@@ -35,13 +35,21 @@
             // Delay hiding the loader by 2 seconds (2000 milliseconds)
             setTimeout(function() {
                 document.querySelector('.loader').style.display = 'none';
-            }, 1000);
+            }, 1500);
         });
     </script>
 </head>
 <body>
     <div class="loader">
+        <!-- Circle Loader -->
         <div class="loader-circle"></div>
+    
+        <!-- Dots Loader -->
+        <div class="loader-dots">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
     <header>
         <nav>
