@@ -142,3 +142,50 @@ h2 {
         font-family: 'Montserrat', sans-serif; /* Ensure Montserrat font is applied */
     }
 }
+
+#visit-count {
+    font-size: 10px;
+    color: #bdc3c7;
+    text-align: right;
+    position: absolute;
+    right: 13px; /* Aligns it to the far right side */
+    top: 48px; /* Adds padding from the top */
+    transform: translateY(-50%); /* Keeps it centered vertically relative to the height */
+}
+
+/* Media query for screens smaller than 768px (tablet and mobile) */
+@media (max-width: 768px) {
+    #visit-count {
+        font-size: 9px; /* Decrease font size for smaller screens */
+        top: 40px; /* Adjust top padding for smaller screens */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Stack footer content vertically */
+        align-items: center; /* Center align content */
+        text-align: center; /* Center align text */
+    }
+
+    .social-links {
+        margin-top: 10px;
+    }
+
+    #visit-count {
+        position: static; /* Remove absolute positioning on small screens */
+        margin-top: 15px; /* Add space between visit count and other content */
+        text-align: center; /* Center the visit count */
+    }
+}
+
+/* Media query for screens smaller than 480px (mobile phones) */
+@media (max-width: 480px) {
+    #visit-count {
+        font-size: 8px; /* Further reduce font size for very small screens */
+        top: 35px; /* Further adjust top padding */
+    }
+
+    .footer-content p {
+        font-size: 12px; /* Adjust paragraph font size */
+    }
+}
+
