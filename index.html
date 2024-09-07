@@ -290,6 +290,27 @@
             <div id="visit-count" ></div>
         </div>
     </footer>
+    <script>
+        // Function to get and update visit count
+        function updateVisitCount() {
+            let visitCount = localStorage.getItem('visitCount');
+            
+            if (!visitCount) {
+                visitCount = 0;  // Initialize if no visit count found
+            }
+    
+            visitCount++;  // Increment the visit count
+    
+            // Update the visit count in localStorage
+            localStorage.setItem('visitCount', visitCount);
+    
+            // Display visit count in the footer
+            document.getElementById('visit-count').innerText = "Visits: " + visitCount;
+        }
+    
+        // Call the function on page load
+        window.onload = updateVisitCount;
+    </script>
     <script src="scripts.js"></script>
     <script src="skill.js"></script>
     <script src="mobile menu.js"></script>
